@@ -4,7 +4,6 @@
 {% block title %}PKPL Task 2{% endblock %}
 
 {% block content %}
-<!-- Header Navigation -->
 <nav class="border-b border-gray-200 bg-white sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <h1 class="text-2xl font-bold text-gray-900">PKPL Task 2</h1>
@@ -18,10 +17,8 @@
     </div>
 </nav>
 
-<!-- Main Content -->
 <main class="bg-gradient-to-b from-blue-50 via-white to-white">
     <div class="max-w-7xl mx-auto px-6 py-16">
-        <!-- Welcome Section -->
         <section class="mb-24">
             <h2 class="text-5xl font-bold text-gray-900 mb-6 leading-tight font-serif">
                 Selamat datang di website<br>Dery Andreas Tampubolon
@@ -32,11 +29,9 @@
             </p>
         </section>
 
-        <!-- Team Members Section -->
         <section id="members" class="mb-24">
-            <!-- First Row: Andrew (Large) + 2 Small Cards -->
             <div class="grid grid-cols-3 gap-6 mb-6">
-                <!-- Andrew Sanjay - Large Card -->
+                
                 <div class="col-span-1 bg-white rounded-lg border border-gray-200 p-8 shadow-sm">
                     <div class="flex gap-6">
                         <div class="flex-shrink-0">
@@ -50,13 +45,50 @@
                             <p class="text-gray-600 text-sm mb-4">NPM: 240000000</p>
                             <div class="flex gap-2">
                                 <span class="inline-block bg-green-300 text-green-900 text-xs font-semibold px-3 py-1 rounded-full">Project Manager</span>
-                                <span class="inline-block bg-blue-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">Communication</span>
+                                <span class="inline-block bg-blue-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">Management</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Riyaan Balhaqi - Small Card -->
+                <div class="col-span-1 bg-blue-50 rounded-lg border border-gray-200 p-6 shadow-sm">
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 rounded bg-gray-300 overflow-hidden">
+                                <img src="{% static 'image/jarred.jpeg' %}" alt="Jared" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="text-blue-600 text-xs font-bold uppercase tracking-wider mb-2">Backend Developer</p>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2 font-serif">Jarred Muhammad</h3>
+                            <p class="text-gray-600 text-sm mb-4">NPM: 2406432425</p>
+                            <div class="flex gap-2">
+                                <span class="inline-block bg-green-300 text-green-900 text-xs font-semibold px-3 py-1 rounded-full">Programming</span>
+                                <span class="inline-block bg-blue-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">Python</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-span-1 bg-blue-50 rounded-lg border border-gray-200 p-6 shadow-sm">
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 rounded bg-gray-300 overflow-hidden">
+                                <img src="https://via.placeholder.com/64/4f80e8/ffffff?text=FF" alt="Farel" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="flex-grow">
+                            <p class="text-blue-600 text-xs font-bold uppercase tracking-wider mb-2">Backend Developer</p>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2 font-serif">Farrel Faridzi</h3>
+                            <p class="text-gray-600 text-sm mb-4">NPM: 240000000</p>
+                            <div class="flex gap-2">
+                                <span class="inline-block bg-green-300 text-green-900 text-xs font-semibold px-3 py-1 rounded-full">Programming</span>
+                                <span class="inline-block bg-blue-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">Python</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-span-1 bg-blue-50 rounded-lg border border-gray-200 p-6 shadow-sm">
                     <div class="flex gap-4">
                         <div class="flex-shrink-0">
@@ -76,7 +108,6 @@
                     </div>
                 </div>
 
-                <!-- Dery Andreas - Small Card -->
                 <div class="col-span-1 bg-blue-50 rounded-lg border border-gray-200 p-6 shadow-sm">
                     <div class="flex gap-4">
                         <div class="flex-shrink-0">
@@ -95,55 +126,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Second Row: 2 Large Blue Cards -->
-            <div class="grid grid-cols-2 gap-6">
-                <!-- Jared Hidayat -->
-                <div class="bg-gradient-to-b from-blue-600 to-blue-700 rounded-lg p-8 text-white shadow-lg">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-6">
-                            <div class="flex-shrink-0">
-                                <div class="w-20 h-20 rounded bg-white bg-opacity-20 overflow-hidden border-2 border-white border-opacity-20">
-                                    <img src="{% static 'image/jarred.jpeg' %}" alt="Jared" class="w-full h-full object-cover">
-                                </div>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl font-semibold mb-1 font-serif">Jarred Muhammad</h3>
-                                <p class="text-blue-100 text-sm mb-2">NPM: 2406432425</p>
-                                <p class="text-blue-100 text-sm font-medium">Role: Quality Assurance</p>
-                            </div>
-                        </div>
-                        <svg class="w-10 h-12 text-white opacity-30" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
-                        </svg>
-                    </div>
-                </div>
-
-                <!-- Farel Faridzi -->
-                <div class="bg-gradient-to-b from-blue-600 to-blue-700 rounded-lg p-8 text-white shadow-lg">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-6">
-                            <div class="flex-shrink-0">
-                                <div class="w-20 h-20 rounded bg-white bg-opacity-20 overflow-hidden border-2 border-white border-opacity-20">
-                                    <img src="https://via.placeholder.com/80/4f80e8/ffffff?text=FF" alt="Farel" class="w-full h-full object-cover">
-                                </div>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl font-semibold mb-1 font-serif">Farel Faridzi</h3>
-                                <p class="text-blue-100 text-sm mb-2">NPM: 240000000</p>
-                                <p class="text-blue-100 text-sm font-medium">Role: Quality Assurance</p>
-                            </div>
-                        </div>
-                        <svg class="w-10 h-12 text-white opacity-30" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
-                        </svg>
-                    </div>
-                </div>
             </div>
         </section>
 
-        <!-- Technical Integrity Section -->
         <section class="bg-blue-50 rounded-lg p-16 text-center mb-16">
             <h3 class="text-3xl font-bold text-gray-900 mb-6 font-serif">Technical Integrity & Collaborative Research</h3>
             <p class="text-gray-700 max-w-3xl mx-auto mb-12 leading-relaxed">
@@ -166,7 +152,6 @@
         </section>
     </div>
 
-    <!-- Footer -->
     <footer class="bg-gray-100 text-gray-600 py-8 border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex justify-between items-center text-sm">
