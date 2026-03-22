@@ -3,11 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}TK2 PKPL{% endblock %}</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50">
-        <main class="max-w-6xl mx-auto px-4 py-8">
+<body class="{% block body_class %}bg-gray-50{% endblock %} min-h-screen flex flex-col" {% block body_style %}{% endblock %}>
+
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold text-gray-900">TK2 PKPL</a>
+            <div class="flex items-center gap-8">
+                {% block nav_links %}{% endblock %}
+                <a href="https://docs.google.com" target="_blank" class="text-gray-600 hover:text-gray-900 font-medium">Docs</a>
+            </div>
+            <div class="flex items-center gap-4">
+                {% if user.is_authenticated %}
+                    <span class="text-gray-500 text-sm hidden sm:block">{{ user.email }}</span>
+                    <a href="{% url 'account_logout' %}" class="bg-red-500 hover:bg-red-600 text-white text-sm font-semibold px-5 py-2 rounded-lg transition-colors">Logout</a>
+                {% else %}
+                    <a href="{% url 'account_login' %}" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-5 py-2 rounded-lg transition-colors">Sign In</a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-1 {% block main_class %}{% endblock %}">
         {% block content %}{% endblock %}
     </main>
+
+    <footer class="bg-white border-t border-gray-200 py-4 px-8 flex justify-between items-center text-xs text-gray-400">
+        <span>© 2026 Kelompok Dery Andreas Tampubolon. ALL RIGHTS RESERVED.</span>
+        <div class="flex gap-6">
+            <a href="#" class="hover:text-gray-600 transition-colors">PRIVACY POLICY</a>
+            <a href="#" class="hover:text-gray-600 transition-colors">TERMS OF SERVICE</a>
+            <a href="#" class="hover:text-gray-600 transition-colors">SECURITY</a>
+        </div>
+    </footer>
+
 </body>
 </html>
