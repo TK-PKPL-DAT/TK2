@@ -11,10 +11,6 @@
     <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="/" class="text-xl font-bold text-gray-900">TK2 PKPL</a>
-            <div class="flex items-center gap-8">
-                {% block nav_links %}{% endblock %}
-                <a href="https://docs.google.com" target="_blank" class="text-gray-600 hover:text-gray-900 font-medium">Docs</a>
-            </div>
             <div class="flex items-center gap-4">
                 {% if user.is_authenticated %}
                     <span class="text-gray-500 text-sm hidden sm:block">{{ user.email }}</span>
