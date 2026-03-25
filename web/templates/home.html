@@ -9,7 +9,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="bg-gradient-to-b from-blue-50 via-white to-white">
+<div class="{% if not bg_color %}bg-gradient-to-b from-blue-50 via-white to-white{% else %}bg-transparent{% endif %} transition-colors duration-500">
     <div class="max-w-7xl mx-auto px-6 py-16">
         <section class="mb-24">
             <h2 class="text-5xl font-bold text-gray-900 mb-6 leading-tight font-serif">
@@ -25,96 +25,61 @@
             <div class="grid grid-cols-3 gap-6 mb-6">
 
                 <div class="col-span-1 bg-white rounded-lg border border-gray-200 p-8 shadow-sm">
-                    <div class="flex gap-6">
-                        <div class="flex-shrink-0">
-                            <div class="w-24 h-24 rounded-lg bg-gray-300 overflow-hidden">
-                                <img src="https://via.placeholder.com/96/cccccc/999999?text=AS" alt="Andrew" class="w-full h-full object-cover">
-                            </div>
-                        </div>
-                        <div class="flex-grow">
-                            <p class="text-blue-600 text-xs font-bold uppercase tracking-wider mb-2">Team Lead</p>
-                            <h3 class="text-2xl font-semibold text-gray-900 mb-2 font-serif">Andrew Putra S.H.</h3>
-                            <p class="text-gray-600 text-sm mb-4">NPM: 240000000</p>
-                            <div class="flex gap-2">
-                                <span class="inline-block bg-green-300 text-green-900 text-xs font-semibold px-3 py-1 rounded-full">Project Manager</span>
-                                <span class="inline-block bg-blue-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">Management</span>
-                            </div>
+                    <div class="flex-grow">
+                        <p class="text-blue-600 text-xs font-bold uppercase tracking-wider mb-2">Team Lead</p>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2 font-serif">Andrew Sanjay</h3>
+                        <p class="text-gray-600 text-sm mb-4">NPM: 240000000</p>
+                        <div class="flex gap-2">
+                            <span class="inline-block bg-green-300 text-green-900 text-xs font-semibold px-3 py-1 rounded-full">Project Manager</span>
+                            <span class="inline-block bg-blue-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">Management</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-span-1 bg-blue-50 rounded-lg border border-gray-200 p-6 shadow-sm">
-                    <div class="flex gap-4">
-                        <div class="flex-shrink-0">
-                            <div class="w-16 h-16 rounded bg-gray-300 overflow-hidden">
-                                <img src="{% static 'image/jarred.jpeg' %}" alt="Jared" class="w-full h-full object-cover">
-                            </div>
-                        </div>
-                        <div class="flex-grow">
-                            <p class="text-blue-600 text-xs font-bold uppercase tracking-wider mb-2">Backend Developer</p>
-                            <h3 class="text-2xl font-semibold text-gray-900 mb-2 font-serif">Jarred Muhammad</h3>
-                            <p class="text-gray-600 text-sm mb-4">NPM: 2406432425</p>
-                            <div class="flex gap-2">
-                                <span class="inline-block bg-green-300 text-green-900 text-xs font-semibold px-3 py-1 rounded-full">Programming</span>
-                                <span class="inline-block bg-blue-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">Python</span>
-                            </div>
+                    <div class="flex-grow">
+                        <p class="text-blue-600 text-xs font-bold uppercase tracking-wider mb-2">Backend Developer</p>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2 font-serif">Jarred Muhammad</h3>
+                        <p class="text-gray-600 text-sm mb-4">NPM: 2406432425</p>
+                        <div class="flex gap-2">
+                            <span class="inline-block bg-green-300 text-green-900 text-xs font-semibold px-3 py-1 rounded-full">Programming</span>
+                            <span class="inline-block bg-blue-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">Python</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-span-1 bg-blue-50 rounded-lg border border-gray-200 p-6 shadow-sm">
-                    <div class="flex gap-4">
-                        <div class="flex-shrink-0">
-                            <div class="w-16 h-16 rounded bg-gray-300 overflow-hidden">
-                                <img src="https://via.placeholder.com/64/4f80e8/ffffff?text=FF" alt="Farel" class="w-full h-full object-cover">
-                            </div>
-                        </div>
-                        <div class="flex-grow">
-                            <p class="text-blue-600 text-xs font-bold uppercase tracking-wider mb-2">Backend Developer</p>
-                            <h3 class="text-2xl font-semibold text-gray-900 mb-2 font-serif">Farrel Faridzi</h3>
-                            <p class="text-gray-600 text-sm mb-4">NPM: 240000000</p>
-                            <div class="flex gap-2">
-                                <span class="inline-block bg-green-300 text-green-900 text-xs font-semibold px-3 py-1 rounded-full">Programming</span>
-                                <span class="inline-block bg-blue-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">Python</span>
-                            </div>
+                    <div class="flex-grow">
+                        <p class="text-blue-600 text-xs font-bold uppercase tracking-wider mb-2">Backend Developer</p>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2 font-serif">Farrel Faridzi</h3>
+                        <p class="text-gray-600 text-sm mb-4">NPM: 240000000</p>
+                        <div class="flex gap-2">
+                            <span class="inline-block bg-green-300 text-green-900 text-xs font-semibold px-3 py-1 rounded-full">Programming</span>
+                            <span class="inline-block bg-blue-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">Python</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-span-1 bg-blue-50 rounded-lg border border-gray-200 p-6 shadow-sm">
-                    <div class="flex gap-4">
-                        <div class="flex-shrink-0">
-                            <div class="w-16 h-16 rounded bg-gray-300 overflow-hidden">
-                                <img src="https://via.placeholder.com/64/cccccc/999999?text=RB" alt="Riyaan" class="w-full h-full object-cover">
-                            </div>
-                        </div>
-                        <div class="flex-grow">
-                            <p class="text-blue-600 text-xs font-bold uppercase tracking-wider mb-2">Front End Developer</p>
-                            <h3 class="text-2xl font-semibold text-gray-900 mb-2 font-serif">Riyaan Baihaqi</h3>
-                            <p class="text-gray-600 text-sm mb-4">NPM: 2406358762</p>
-                            <div class="flex gap-2">
-                                <span class="inline-block bg-green-300 text-green-900 text-xs font-semibold px-3 py-1 rounded-full">Programming</span>
-                                <span class="inline-block bg-blue-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">CSS</span>
-                            </div>
+                    <div class="flex-grow">
+                        <p class="text-blue-600 text-xs font-bold uppercase tracking-wider mb-2">Front End Developer</p>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2 font-serif">Riyaan Baihaqi</h3>
+                        <p class="text-gray-600 text-sm mb-4">NPM: 2406358762</p>
+                        <div class="flex gap-2">
+                            <span class="inline-block bg-green-300 text-green-900 text-xs font-semibold px-3 py-1 rounded-full">Programming</span>
+                            <span class="inline-block bg-blue-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">CSS</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-span-1 bg-blue-50 rounded-lg border border-gray-200 p-6 shadow-sm">
-                    <div class="flex gap-4">
-                        <div class="flex-shrink-0">
-                            <div class="w-16 h-16 rounded bg-gray-300 overflow-hidden">
-                                <img src="https://via.placeholder.com/64/cccccc/999999?text=DA" alt="Dery" class="w-full h-full object-cover">
-                            </div>
-                        </div>
-                        <div class="flex-grow">
-                            <p class="text-blue-600 text-xs font-bold uppercase tracking-wider mb-2">UI/UX Designer</p>
-                            <h3 class="text-2xl font-semibold text-gray-900 mb-2 font-serif">Dery Andreas</h3>
-                            <p class="text-gray-600 text-sm mb-4">NPM: 240000000</p>
-                            <div class="flex gap-2">
-                                <span class="inline-block bg-green-300 text-green-900 text-xs font-semibold px-3 py-1 rounded-full">UI/UX Design</span>
-                                <span class="inline-block bg-blue-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">Figma</span>
-                            </div>
+                    <div class="flex-grow">
+                        <p class="text-blue-600 text-xs font-bold uppercase tracking-wider mb-2">UI/UX Designer</p>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2 font-serif">Dery Andreas</h3>
+                        <p class="text-gray-600 text-sm mb-4">NPM: 2406347380</p>
+                        <div class="flex gap-2">
+                            <span class="inline-block bg-green-300 text-green-900 text-xs font-semibold px-3 py-1 rounded-full">UI/UX Design</span>
+                            <span class="inline-block bg-blue-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">Figma</span>
                         </div>
                     </div>
                 </div>
@@ -122,25 +87,11 @@
             </div>
         </section>
 
-        <section class="bg-blue-50 rounded-lg p-16 text-center mb-16">
+        <section class="bg-blue-50 rounded-lg p-16 text-center mb-16 shadow-sm border border-gray-100">
             <h3 class="text-3xl font-bold text-gray-900 mb-6 font-serif">Implementasi autentikasi dan otorisasi pada fitur berikut</h3>
             <p class="text-gray-700 max-w-3xl mx-auto mb-12 leading-relaxed">
-                Jika Anda ingin mengakses fitur-fitur berikut, pastikan Anda memiliki akun yang valid dan telah masuk ke sistem melalui Google Account. Karena fitur-fitur yang memerlukan autentikasi dan otorisasi akan memberikan akses hanya kepada pengguna yang memiliki hak akses yang sesuai
+                Jika Anda ingin mengakses fitur-fitur berikut, pastikan Anda memiliki akun yang valid dan telah masuk ke sistem melalui Google Account. Karena fitur-fitur yang memerlukan autentikasi dan otorisasi akan memberikan akses hanya kepada pengguna yang memiliki hak akses yang sesuai.
             </p>
-            <div class="flex justify-center gap-16">
-                <div class="flex items-center gap-3">
-                    <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                    </svg>
-                    <span class="text-gray-700 font-medium">Read-Only Mode</span>
-                </div>
-                <div class="flex items-center gap-3">
-                    <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
-                    </svg>
-                    <span class="text-gray-700 font-medium">Secure Handshake</span>
-                </div>
-            </div>
         </section>
     </div>
 </div>
