@@ -22,7 +22,7 @@
         </div>
     </nav>
 
-    {% if user.is_authenticated %}
+    {% if is_allowed_member %}
     <div class="bg-gray-900 text-white px-6 py-2 flex justify-center items-center shadow-md relative z-40">
         <form action="{% url 'edit_background' %}" method="POST" class="flex items-center gap-4">
             {% csrf_token %}

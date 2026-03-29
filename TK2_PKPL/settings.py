@@ -25,6 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-ai@8izvz_s#a0%vttk+2at35@+oc3*lp$g@woph*4g2^)q&jb%')
 
+ALLOWED_MEMBERS = [e.strip() for e in os.environ.get('ALLOWED_MEMBERS', '').split(',') if e.strip()]
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -107,6 +109,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'web.context_processors.allowed_member',
             ],
         },
     },
