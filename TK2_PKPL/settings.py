@@ -59,9 +59,8 @@ LOGOUT_REDIRECT_URL = '/'
 # Allauth configuration
 ACCOUNT_LOGIN_METHODS = {'email'}
 SOCIALACCOUNT_LOGIN_ON_GET = True
-ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*']
 ACCOUNT_EMAIL_VERIFICATION = 'none'
-ACCOUNT_SIGNUP_FORM_CLASS = 'web.forms.CustomSignupForm'
+SOCIALACCOUNT_AUTO_SIGNUP = True
 
 # Konfigurasi Provider
 SOCIALACCOUNT_PROVIDERS = {
